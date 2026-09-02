@@ -1,0 +1,332 @@
+% Exact LaTeX recreation of the supplied Phase-1.pdf
+% Compile with pdfLaTeX. Place member pictures in the same folder if required.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.55cm,bottom=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+
+% -------------------------------------------------
+% COLOURS
+% -------------------------------------------------
+\definecolor{TitleBlue}{RGB}{61,103,154}
+
+% -------------------------------------------------
+% GENERAL SETTINGS
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% The supplied document uses a clean sans-serif heading style
+% and italic serif-style explanatory text.
+\newcommand{\blueheading}[1]{%
+    {\sffamily\color{TitleBlue}\fontsize{15}{18}\selectfont #1}%
+}
+
+\newcommand{\bluebigheading}[1]{%
+    {\sffamily\bfseries\color{TitleBlue}\fontsize{16}{19}\selectfont #1}%
+}
+
+\newcommand{\instruction}[1]{%
+    {\itshape\fontsize{10.5}{12.5}\selectfont #1}%
+}
+
+\newcommand{\answerbox}[2][3.0cm]{%
+    \vspace{2pt}
+    \noindent
+    \fbox{%
+        \begin{minipage}[t][#1][t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \vspace{1mm}
+            \itshape #2
+        \end{minipage}
+    }
+}
+
+% -------------------------------------------------
+% HEADER / FOOTER
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+    \sffamily\bfseries\itshape\fontsize{10.5}{12}\selectfont
+    DSCPP-III-2026-T204
+}
+\fancyhead[R]{%
+    \sffamily\bfseries\fontsize{10.5}{12}\selectfont
+    PROJECT PROPOSAL
+}
+\fancyfoot[R]{%
+    \itshape\fontsize{10}{12}\selectfont
+    Page \thepage
+}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{23pt}
+\setlength{\footskip}{24pt}
+
+% -------------------------------------------------
+% PAGE 1
+% -------------------------------------------------
+\begin{document}
+
+\vspace*{4mm}
+
+\bluebigheading{PROJECT AND TEAM INFORMATION}
+
+\vspace{13mm}
+
+\blueheading{Project Title}
+
+\vspace{1mm}
+
+\instruction
+
+\answerbox[1.0cm]{Logistics and Delivery Management}
+
+\vspace{13mm}
+
+\blueheading{Student / Team Information}
+
+\vspace{2mm}
+
+% Team information table
+% Compact 4-member layout so all members remain on Page 1.
+\noindent
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{0.69\textwidth}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Team Name:}\\[-1mm]
+\textit
+\vspace
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{LogiCore}
+\vspace{1.5mm}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 1 (Team Lead)}\\[-1mm]
+\textit
+\vspace
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Agarwal, Kush -- 2510015130}\\
+\textit{2510015130@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{m1.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 2}\\[-1mm]
+\textit
+\vspace
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Singh, Bhupendra -- 2510011665}\\
+\textit{2510011665@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{m2.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 3}\\[-1mm]
+\textit
+\vspace
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Varshney, Raghav -- 2510011388}\\
+\textit{2510011388@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{m3.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 4}\\[-1mm]
+\textit
+\vspace
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Jakhmola, Ishan -- 2510012067}\\
+\textit{2510012067@geu.ac.in}
+
+\vspace{2mm}
+ \includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{m4.png}
+\end{minipage}
+\\
+\hline
+\end{tabularx}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 2
+% -------------------------------------------------
+
+\bluebigheading{PROPOSAL DESCRIPTION }
+
+\vspace{12mm}
+
+\blueheading{Motivation }
+
+\vspace{1mm}
+
+\instruction
+
+\answerbox[5.9cm]{Logistics and delivery management includes handling deliveries, customers, drivers and delivery statuses. When this is done manually it becomes hard to track pending deliveries assign drivers who're available find specific delivery records or deal with urgent deliveries in a timely way. This often causes delays, mistakes in records and trouble managing a number of deliveries. Our project wants to build a Logistics and Delivery Management System using C++. The system will have a user- graphical interface. Users can add deliveries view existing ones manage driver information assign drivers to deliveries, search for delivery records and update the status of deliveries. This project is also driven by the chance to use Data Structures and Algorithms (DSA) and Object-Oriented Programming (OOP) concepts, in a real-life situation.The goal is to create a system that's simple, practical and easy to use. It will show how C++ programming ideas can help make delivery operations more organized and efficient.}
+
+\vspace{12mm}
+
+\blueheading{State of the Art / Current solution }
+
+\vspace{1mm}
+
+\instruction
+
+\answerbox[4.75cm]{Today logistics companies usually use software or online platforms to handle deliveries. These tools can keep customer and delivery details assign drivers, track packages handle vehicle information and share delivery updates. Big platforms might also use GPS, real-time tracking, better routes, databases and mobile apps. These systems can be hard to use and have a lot of features that are not needed for a small business or a school project. For delivery management people can also use spreadsheets or write things down by hand. This makes it harder to find, update and organize records when there are more deliveries.Our system is focused on the tasks needed for a small logistics service. It offers an user interface for handling deliveries and drivers while showing how to use C++ OOP and DSA. }
+
+\vspace{12mm}
+
+\blueheading{Project Goals and Milestones }
+
+\vspace{1mm}
+
+\instruction
+
+\answerbox[7.15cm]{The main goal of this project is to develop a simple Logistics and Delivery Management System using C++ that provides an easy-to-use graphical interface and demonstrates the practical application of DSA and OOP concepts.
+The major goals are:
+
+•	Develop a user-friendly GUI using C++ and Qt for interacting with the system.
+
+•	Manage delivery records including delivery ID, customer name, pickup location, destination, and delivery status.
+
+•	Manage driver information including driver ID, name, vehicle, and availability.
+
+•	Implement a Queue to manage normal pending deliveries using the FIFO principle.
+
+•	Implement a Priority Queue to give higher priority to urgent deliveries.
+
+•	Use Linked Lists for dynamically managing driver or delivery records.
+
+•	Implement searching to find a delivery using its delivery ID.
+
+•	Implement sorting to organize delivery records according to ID or priority.
+
+•	Implement driver assignment, where an available driver can be assigned to a pending delivery.
+
+•	Connect the GUI with the C++ backend so that operations performed through the interface are handled by the appropriate classes and data structures.
+}
+
+\vspace{12mm}
+
+\blueheading{Project Approach }
+
+\vspace{1mm}
+
+\instruction
+\instruction
+
+\answerbox[6.05cm]{•	The project will be built as a desktop-based Logistics and Delivery Management System with C++. Logistics and Delivery Management System will offer a graphical user interface through Qt so users can use the system without typing in a command line. Logistics and Delivery Management System will let users add delivery details, view deliveries manage drivers assign drivers, update delivery status and search delivery records It  will be designed using Object-Oriented Programming concepts. This System will contain classes like Delivery, Driver, Customer and Logistics System to keep the code organized and easy to maintain.
+
+•	Logistics and Delivery Management System will be built with Qt Creator, C++ and Qt Widgets. Logistics and Delivery Management System development will be split among four team members: one for UI development one for OOP implementation one for DSA implementation and one, for system integration and testing.Logistics and Delivery Management System will finish after planning, development, integration, testing and final documentation.
+}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 3
+% -------------------------------------------------
+
+\blueheading{System Architecture (High Level Diagram)}
+
+\vspace{1mm}
+
+\instruction
+
+\instruction
+
+\begin{center}
+\includegraphics[
+    width=10\textwidth,
+    height=10cm,
+    keepaspectratio
+]{Architecture.png}
+\end{center}
+
+\vspace{12mm}
+\blueheading{Project Outcome}
+\vspace{1mm}
+
+
+\instruction
+
+\answerbox[5.7cm]{The final result will be a working C++ Logistics and Delivery Management System that has a graphic interface made with Qt. The Logistics and Delivery Management System will let users add, view, search and manage delivery records and driver information. The Logistics and Delivery Management System will also let users assign drivers to deliveries and update delivery status. The Logistics and Delivery Management System project will show how Object‑Oriented Programming and Data Structures can be used in practice. The Logistics and Delivery Management System will use a Queue and a Priority Queue to handle deliveries and a Linked List to keep track of records. The Logistics and Delivery Management System will also perform searching and sorting. The main deliverables, for the Logistics and Delivery Management System will be the working C++ source code, the Qt interface the implemented data structures and algorithms project documentation, a system architecture diagram, testing results and a final presentation.}
+
+\vspace{12mm}
+
+\blueheading{Assumptions}
+
+\vspace{6mm}
+
+\instruction
+
+\answerbox[2.65cm]{The system is designed for a small-scale logistics and delivery environment. Delivery and driver information is assumed to be entered correctly by the user. The project does not include real-time GPS tracking, online payments, live traffic information, or cloud-based services. Delivery locations and statuses are managed within the application. The system is developed primarily for educational purposes to demonstrate C++, OOP, DSA, and GUI development.}
+
+\vspace{12mm}
+
+\blueheading{References}
+
+\vspace{1mm}
+
+\instruction
+
+\answerbox[3.65cm]{
+1. Stroustrup, B. (2013). The C++ programming language (4th ed.). Addison-Wesley Professional.
+
+2. GeeksforGeeks. (n.d.). Data structures. Retrieved September 1, 2026, from GeeksforGeeks
+
+3. GeeksforGeeks. (n.d.). C++ programming language. Retrieved September 1, 2026, from GeeksforGeeks C++.
+
+
+4. cppreference.com. (n.d.). C++ reference. Retrieved September 1, 2026, from cppreference.com.
+
+5. W3Schools. (n.d.). C++ tutorial. Retrieved September 1, 2026, from W3Schools C++ tutorial
+
+
+}
+
+\end{document}
